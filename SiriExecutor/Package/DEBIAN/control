@@ -1,6 +1,6 @@
 Package: de.ng.siriexecutor
 Name: SiriExecutor
-Version: 1.0.2
+Version: 1.0-1
 Description: Assistant+ plugin for shell commands
 Section: Tweaks
 Depends: firmware (>= 8.0), org.thebigboss.assistantplus
