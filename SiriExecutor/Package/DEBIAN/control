@@ -1,16 +1,11 @@
-Package: de.ng.SiriExecutor
+Package: de.ng.siriexecutor
 Name: SiriExecutor
 Version: 1.0-1
-Description: 
+Description: Assistant+ plugin for shell commands
 Section: Tweaks
-Depends: firmware (>= 5.0)
-Conflicts: 
-Replaces: 
+Depends: firmware (>= 8.0), org.thebigboss.assistantplus
 Priority: optional
 Architecture: iphoneos-arm
-Author: Lukas Werner
-Homepage: 
-Depiction: 
-Maintainer: 
-Icon: 
-
+Author: luke <luke@peng-u-in.de>
+Depiction: http://repo.peng-u-in.de/deps/index_new.php?id=de.ng.siriexecutor
+Maintainer: luke <luke@peng-u-in.de>

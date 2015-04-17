@@ -264,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "localexec killall MobileCydia\n/opt/iOSOpenDev/bin/iosod --xcbp\nlocalrespring\nsleep 10\nlocalexec cycript -p SpringBoard /var/root/Cycript/unlock.cy";
+			shellScript = "#localexec killall MobileCydia\n/opt/iOSOpenDev/bin/iosod --xcbp\n#localrespring\n#sleep 10\n#localexec cycript -p SpringBoard /var/root/Cycript/unlock.cy";
 		};
 /* End PBXShellScriptBuildPhase section */
 
