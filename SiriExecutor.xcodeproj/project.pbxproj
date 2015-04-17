@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD7A6C861ADFC16D00691B4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7A6C851ADFC16D00691B4C /* Foundation.framework */; };
+		CD7A6C881ADFC16D00691B4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7A6C871ADFC16D00691B4C /* UIKit.framework */; };
+		CD7A6CA71ADFC25D00691B4C /* AssistantPlusHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7A6CA61ADFC25D00691B4C /* AssistantPlusHeaders.h */; };
+		CD7A6CAA1ADFC2C500691B4C /* SiriExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7A6CA81ADFC2C500691B4C /* SiriExecutor.h */; };
+		CD7A6CAB1ADFC2C500691B4C /* SiriExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7A6CA91ADFC2C500691B4C /* SiriExecutor.m */; };
+		CD7A6CAE1ADFC30800691B4C /* SiriExecutorCommands.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7A6CAC1ADFC30800691B4C /* SiriExecutorCommands.h */; };
+		CD7A6CAF1ADFC30800691B4C /* SiriExecutorCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7A6CAD1ADFC30800691B4C /* SiriExecutorCommands.m */; };
+		CD7A6CB11ADFC7AE00691B4C /* NSTask.h in Headers */ = {isa = PBXBuildFile; fileRef = CD7A6CB01ADFC7AE00691B4C /* NSTask.h */; };
+		CD7A6CBD1AE0072000691B4C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7A6CBC1AE0072000691B4C /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD7A6C821ADFC16D00691B4C /* SiriExecutor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SiriExecutor; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7A6C851ADFC16D00691B4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CD7A6C871ADFC16D00691B4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CD7A6C8C1ADFC16D00691B4C /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		CD7A6C8D1ADFC16D00691B4C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		CD7A6C8F1ADFC16D00691B4C /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		CD7A6C901ADFC16D00691B4C /* SiriExecutor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SiriExecutor-Prefix.pch"; sourceTree = "<group>"; };
+		CD7A6CA61ADFC25D00691B4C /* AssistantPlusHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantPlusHeaders.h; sourceTree = "<group>"; };
+		CD7A6CA81ADFC2C500691B4C /* SiriExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriExecutor.h; sourceTree = "<group>"; };
+		CD7A6CA91ADFC2C500691B4C /* SiriExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriExecutor.m; sourceTree = "<group>"; };
+		CD7A6CAC1ADFC30800691B4C /* SiriExecutorCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriExecutorCommands.h; sourceTree = "<group>"; };
+		CD7A6CAD1ADFC30800691B4C /* SiriExecutorCommands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriExecutorCommands.m; sourceTree = "<group>"; };
+		CD7A6CB01ADFC7AE00691B4C /* NSTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTask.h; sourceTree = "<group>"; };
+		CD7A6CB51ADFCA2B00691B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7A6CB91ADFD76500691B4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizable.strings; sourceTree = "<group>"; };
+		CD7A6CBB1ADFD7D000691B4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		CD7A6CBC1AE0072000691B4C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD7A6C7E1ADFC16D00691B4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7A6CBD1AE0072000691B4C /* CoreFoundation.framework in Frameworks */,
+				CD7A6C861ADFC16D00691B4C /* Foundation.framework in Frameworks */,
+				CD7A6C881ADFC16D00691B4C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD7A6C781ADFC16D00691B4C = {
+			isa = PBXGroup;
+			children = (
+				CD7A6C891ADFC16D00691B4C /* SiriExecutor */,
+				CD7A6C841ADFC16D00691B4C /* Frameworks */,
+				CD7A6C831ADFC16D00691B4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD7A6C831ADFC16D00691B4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6C821ADFC16D00691B4C /* SiriExecutor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD7A6C841ADFC16D00691B4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CBC1AE0072000691B4C /* CoreFoundation.framework */,
+				CD7A6C851ADFC16D00691B4C /* Foundation.framework */,
+				CD7A6C871ADFC16D00691B4C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD7A6C891ADFC16D00691B4C /* SiriExecutor */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CA81ADFC2C500691B4C /* SiriExecutor.h */,
+				CD7A6CA91ADFC2C500691B4C /* SiriExecutor.m */,
+				CD7A6CAC1ADFC30800691B4C /* SiriExecutorCommands.h */,
+				CD7A6CAD1ADFC30800691B4C /* SiriExecutorCommands.m */,
+				CD7A6CA61ADFC25D00691B4C /* AssistantPlusHeaders.h */,
+				CD7A6CB01ADFC7AE00691B4C /* NSTask.h */,
+				CD7A6C8A1ADFC16D00691B4C /* Package */,
+				CD7A6C8E1ADFC16D00691B4C /* Supporting Files */,
+			);
+			path = SiriExecutor;
+			sourceTree = "<group>";
+		};
+		CD7A6C8A1ADFC16D00691B4C /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6C8B1ADFC16D00691B4C /* DEBIAN */,
+				CD7A6CB21ADFCA2B00691B4C /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		CD7A6C8B1ADFC16D00691B4C /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6C8C1ADFC16D00691B4C /* control.txt */,
+				CD7A6C8D1ADFC16D00691B4C /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		CD7A6C8E1ADFC16D00691B4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6C8F1ADFC16D00691B4C /* PackageVersion.plist */,
+				CD7A6C901ADFC16D00691B4C /* SiriExecutor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD7A6CB21ADFCA2B00691B4C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CB31ADFCA2B00691B4C /* AssistantPlusPlugins */,
+			);
+			name = Library;
+			path = Package/Library;
+			sourceTree = "<group>";
+		};
+		CD7A6CB31ADFCA2B00691B4C /* AssistantPlusPlugins */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CB41ADFCA2B00691B4C /* SiriExecutor.assistantPlugin */,
+			);
+			path = AssistantPlusPlugins;
+			sourceTree = "<group>";
+		};
+		CD7A6CB41ADFCA2B00691B4C /* SiriExecutor.assistantPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CB61ADFD75800691B4C /* de.lproj */,
+				CD7A6CB71ADFD75800691B4C /* en.lproj */,
+				CD7A6CB51ADFCA2B00691B4C /* Info.plist */,
+			);
+			path = SiriExecutor.assistantPlugin;
+			sourceTree = "<group>";
+		};
+		CD7A6CB61ADFD75800691B4C /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CB81ADFD76500691B4C /* Localizable.strings */,
+			);
+			path = de.lproj;
+			sourceTree = "<group>";
+		};
+		CD7A6CB71ADFD75800691B4C /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				CD7A6CBA1ADFD7D000691B4C /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD7A6C7F1ADFC16D00691B4C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7A6CAA1ADFC2C500691B4C /* SiriExecutor.h in Headers */,
+				CD7A6CA71ADFC25D00691B4C /* AssistantPlusHeaders.h in Headers */,
+				CD7A6CB11ADFC7AE00691B4C /* NSTask.h in Headers */,
+				CD7A6CAE1ADFC30800691B4C /* SiriExecutorCommands.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CD7A6C811ADFC16D00691B4C /* SiriExecutor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7A6CA11ADFC16D00691B4C /* Build configuration list for PBXNativeTarget "SiriExecutor" */;
+			buildPhases = (
+				CD7A6C7D1ADFC16D00691B4C /* Sources */,
+				CD7A6C7E1ADFC16D00691B4C /* Frameworks */,
+				CD7A6C7F1ADFC16D00691B4C /* Headers */,
+				CD7A6C801ADFC16D00691B4C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriExecutor;
+			productName = SiriExecutor;
+			productReference = CD7A6C821ADFC16D00691B4C /* SiriExecutor */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD7A6C791ADFC16D00691B4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					CD7A6C811ADFC16D00691B4C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = CD7A6C7C1ADFC16D00691B4C /* Build configuration list for PBXProject "SiriExecutor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = CD7A6C781ADFC16D00691B4C;
+			productRefGroup = CD7A6C831ADFC16D00691B4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD7A6C811ADFC16D00691B4C /* SiriExecutor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD7A6C801ADFC16D00691B4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "localexec killall MobileCydia\n/opt/iOSOpenDev/bin/iosod --xcbp\nlocalrespring\nsleep 10\nlocalexec cycript -p SpringBoard /var/root/Cycript/unlock.cy";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD7A6C7D1ADFC16D00691B4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7A6CAB1ADFC2C500691B4C /* SiriExecutor.m in Sources */,
+				CD7A6CAF1ADFC30800691B4C /* SiriExecutorCommands.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD7A6CB81ADFD76500691B4C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7A6CB91ADFD76500691B4C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CD7A6CBA1ADFD7D000691B4C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7A6CBB1ADFD7D000691B4C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD7A6C9F1ADFC16D00691B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		CD7A6CA01ADFC16D00691B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		CD7A6CA21ADFC16D00691B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_NAME = SiriExecutor;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SiriExecutor/SiriExecutor-Prefix.pch";
+				INSTALL_PATH = /Library/AssistantPlusPlugins/SiriExecutor.assistantPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		CD7A6CA31ADFC16D00691B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_NAME = SiriExecutor;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SiriExecutor/SiriExecutor-Prefix.pch";
+				INSTALL_PATH = /Library/AssistantPlusPlugins/SiriExecutor.assistantPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD7A6C7C1ADFC16D00691B4C /* Build configuration list for PBXProject "SiriExecutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7A6C9F1ADFC16D00691B4C /* Debug */,
+				CD7A6CA01ADFC16D00691B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7A6CA11ADFC16D00691B4C /* Build configuration list for PBXNativeTarget "SiriExecutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7A6CA21ADFC16D00691B4C /* Debug */,
+				CD7A6CA31ADFC16D00691B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD7A6C791ADFC16D00691B4C /* Project object */;
+}

@@ -1,0 +1,68 @@
+//
+// Prefix header for all source files of the 'SiriExecutor' target in the 'SiriExecutor' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
+
+//DEBUG section
+//#undef DEBUG
+#define DEBUG 1
+//#define kLogFilePath @"/var/mobile/Documents/de.ng.coono.log"
+#define kLogPrefix @"[SiriExecutor] "
+#define kLogMethodNames 1
+
+static void __attribute__((unused)) LWLog(NSString* format, ...);
+
+static void _LWLogHelper(NSString* caller, NSString* format, ...){
+    NSRegularExpression* logosFunctionRegex=[[NSRegularExpression alloc] initWithPattern:@".*_logos[\\w_]*\\$([\\w_]*)\\$([\\w_]+)\\$([^\\(]*)\\s*\\(\\s*(Class)?.*" options:0 error:nil];
+    NSTextCheckingResult* match=[logosFunctionRegex firstMatchInString:caller options:0 range:NSMakeRange(0, [caller length])];
+    NSInteger numberOfRanges=[match numberOfRanges];
+    if(numberOfRanges == 4 || numberOfRanges == 5){
+        //NSString* group=[caller substringWithRange:[match rangeAtIndex:1]];
+        NSString* cls=[caller substringWithRange:[match rangeAtIndex:2]];
+        NSString* method=[[caller substringWithRange:[match rangeAtIndex:3]] stringByReplacingOccurrencesOfString:@"$" withString:@":"];
+        BOOL isClassMethod=[match rangeAtIndex:4].location != NSNotFound;
+        caller=[NSString stringWithFormat:@"H: %@[%@ %@]", isClassMethod ? @"+" : @"-", cls, method];
+    }
+#if  ! __has_feature(objc_arc)
+    [logosFunctionRegex release];
+#endif
+    
+    va_list args;
+    va_start(args, format);
+#ifdef kLogMethodNames
+    NSString* joinedStrings=[[NSString alloc] initWithFormat:[NSString stringWithFormat:@"[%@] %@", caller, format] arguments:args];
+#else
+    NSString* joinedStrings=[[NSString alloc] initWithFormat:format arguments:args];
+#endif
+    va_end(args);
+#ifdef kLogPrefix
+    NSLog(@"%@%@", kLogPrefix, joinedStrings);
+#else
+    NSLog(@"%@", joinedStrings);
+#endif
+#ifdef kLogFilePath
+    joinedStrings=[[NSString alloc] initWithFormat:@"%@ %@: %@\n", [[NSDate date] description], [[NSProcessInfo processInfo] processName], joinedStrings];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:kLogFilePath]){
+        [joinedStrings writeToFile:kLogFilePath atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    }else{
+        NSFileHandle *myHandle=[NSFileHandle fileHandleForWritingAtPath:kLogFilePath];
+        [myHandle seekToEndOfFile];
+        [myHandle writeData:[joinedStrings dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+#endif
+#if  ! __has_feature(objc_arc)
+    [joinedStrings release];
+#endif
+}
+
+#ifdef DEBUG
+#   define LWLog(...) _LWLogHelper([NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSASCIIStringEncoding], __VA_ARGS__)
+#else
+#   define LWLog(...)
+#endif
+
+//DEBUG section end
