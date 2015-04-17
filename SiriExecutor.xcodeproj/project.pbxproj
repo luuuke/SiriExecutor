@@ -22,7 +22,6 @@
 		CD7A6C821ADFC16D00691B4C /* SiriExecutor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SiriExecutor; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7A6C851ADFC16D00691B4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD7A6C871ADFC16D00691B4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CD7A6C8C1ADFC16D00691B4C /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		CD7A6C8D1ADFC16D00691B4C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		CD7A6C8F1ADFC16D00691B4C /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		CD7A6C901ADFC16D00691B4C /* SiriExecutor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SiriExecutor-Prefix.pch"; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		CD93E0111AE126A000FC89C7 /* SiriExecutorPreferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SiriExecutorPreferences.plist; sourceTree = "<group>"; };
 		CD93E0121AE132BF00FC89C7 /* SiriExecutor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SiriExecutor.png; sourceTree = "<group>"; };
 		CD93E0131AE132BF00FC89C7 /* SiriExecutor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SiriExecutor@2x.png"; sourceTree = "<group>"; };
+		CD93E0151AE13B1F00FC89C7 /* postinst */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = postinst; path = Package/DEBIAN/postinst; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 		CD7A6C8B1ADFC16D00691B4C /* DEBIAN */ = {
 			isa = PBXGroup;
 			children = (
-				CD7A6C8C1ADFC16D00691B4C /* control.txt */,
 				CD7A6C8D1ADFC16D00691B4C /* control */,
+				CD93E0151AE13B1F00FC89C7 /* postinst */,
 			);
 			name = DEBIAN;
 			sourceTree = "<group>";

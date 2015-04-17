@@ -115,7 +115,7 @@ static void settingsChanged(CFNotificationCenterRef center, void *observer, CFSt
 		NSString* tempTrigger=[[self.settings objectForKey:[NSString stringWithFormat:@"trigger_%i", i]] lowercaseString];
 		if(tempTrigger && [tempTrigger length] > 0 && ![self.mappedCommands objectForKey:tempTrigger]){
 			NSString* tempCmd=[self.settings objectForKey:[NSString stringWithFormat:@"command_%i", i]];
-			if(tempCmd){
+			if(tempCmd && [tempCmd length] > 0){
 				self.mappedCommands[tempTrigger]=tempCmd;
 			}
 		}
