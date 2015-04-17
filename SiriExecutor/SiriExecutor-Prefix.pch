@@ -7,8 +7,8 @@
 #endif
 
 //DEBUG section
-//#undef DEBUG
-#define DEBUG 1
+#undef DEBUG
+//#define DEBUG 1
 //#define kLogFilePath @"/var/mobile/Documents/de.ng.coono.log"
 #define kLogPrefix @"[SiriExecutor] "
 #define kLogMethodNames 1

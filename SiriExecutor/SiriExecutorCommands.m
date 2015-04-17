@@ -44,9 +44,6 @@ static void settingsChanged(CFNotificationCenterRef center, void *observer, CFSt
 }
 
 - (BOOL)handleSpeech:(NSString *)text withTokens:(NSSet *)tokens withSession:(id<APSiriSession>)session{
-	
-	LWLog(@"%@", [[NSBundle mainBundle] bundlePath]);
-	
 	NSString* command;
 	if((command=[self commandForSpeech:text andTokens:tokens])){
 		LWLog(@"Handling command for speech: %@", text);
@@ -54,7 +51,7 @@ static void settingsChanged(CFNotificationCenterRef center, void *observer, CFSt
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 			[self executeCommand:command forSpeech:text withSession:session];
 		});
-		
+
 		return YES;
 	}
 	return NO;
@@ -64,7 +61,6 @@ static void settingsChanged(CFNotificationCenterRef center, void *observer, CFSt
 	LWLog(@"searching command for speech: %@ and tokens: %@", text, tokens);
 	
 	__block NSString* command=nil;
-	
 	[self.mappedCommands enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		NSString* trigger=(NSString*)key;
 		NSRegularExpression* regex=[[NSRegularExpression alloc] initWithPattern:trigger options:0 error:nil];
