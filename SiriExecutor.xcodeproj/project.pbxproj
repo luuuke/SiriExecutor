@@ -36,6 +36,9 @@
 		CD7A6CB91ADFD76500691B4C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizable.strings; sourceTree = "<group>"; };
 		CD7A6CBB1ADFD7D000691B4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		CD7A6CBC1AE0072000691B4C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CD93E0111AE126A000FC89C7 /* SiriExecutorPreferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SiriExecutorPreferences.plist; sourceTree = "<group>"; };
+		CD93E0121AE132BF00FC89C7 /* SiriExecutor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SiriExecutor.png; sourceTree = "<group>"; };
+		CD93E0131AE132BF00FC89C7 /* SiriExecutor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SiriExecutor@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 		CD7A6CB21ADFCA2B00691B4C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CD93E00F1AE126A000FC89C7 /* PreferenceLoader */,
 				CD7A6CB31ADFCA2B00691B4C /* AssistantPlusPlugins */,
 			);
 			name = Library;
@@ -162,6 +166,24 @@
 				CD7A6CBA1ADFD7D000691B4C /* Localizable.strings */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		CD93E00F1AE126A000FC89C7 /* PreferenceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CD93E0101AE126A000FC89C7 /* Preferences */,
+			);
+			path = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		CD93E0101AE126A000FC89C7 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				CD93E0121AE132BF00FC89C7 /* SiriExecutor.png */,
+				CD93E0131AE132BF00FC89C7 /* SiriExecutor@2x.png */,
+				CD93E0111AE126A000FC89C7 /* SiriExecutorPreferences.plist */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +418,7 @@
 				CD7A6CA31ADFC16D00691B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
